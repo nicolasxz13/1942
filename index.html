@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+	<title>1942</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+	<header>
+		<h1>1942</h1>
+	</header>
+	<div id="container">
+		<main id="ocean">
+			<div id="players"></div>
+			<div id="enemies"></div>
+			<div id="missiles"></div>
+			<div id="explosions"></div>
+		</main>
+		<aside>
+			<h2>Puntuacion</h2>
+			<p>score</p>
+			<p id="display">00000</p>
+			<p>Derribos<span>10 puntos</span></p>
+			<p>Penalizaciones</p>
+			<p>Derribado<span>-500 puntos</span></p>
+			<button type="button" onclick="start()">Play</button>
+		</aside>
+	</div>
+	<script src="./assets/js/main.js"></script>
+	<audio src="./assets/sound/boom.mp3" id="impact"></audio>
+	<audio src="./assets/sound/suspense.mp3" id="suspense"></audio>
+</body>
+</html>

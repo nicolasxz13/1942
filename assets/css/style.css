@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'CgfLocustResistance', 'Times New Roman', Times, serif;
+}
+
+header,
+#container {
+    background-color: aliceblue;
+}
+
+header {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 72px;
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 0.6em;
+}
+
+#container {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#ocean {
+    /* Especifica posicion base respecto al contenido del padre en este caso el div ocean */
+    position: relative;
+    background-image: url('../img/CustomOcean.jpg');
+    width: 900px;
+    height: 700px;
+    margin-right: 20px;
+    border: 1px solid black;
+}
+
+.player {
+    position: absolute;
+    background-image: url('../img/avion2.png');
+    width: 70px;
+    height: 75px;
+}
+
+.enemy0 {
+    position: absolute;
+    background-image: url('../img/enemy1.png');
+    width: 70px;
+    height: 75px;
+}
+
+.enemy1 {
+    position: absolute;
+    background-image: url('../img/enemy2.png');
+    width: 70px;
+    height: 75px;
+}
+
+
+.missile {
+    position: absolute;
+    background-color: brown;
+    width: 3px;
+    height: 10px;
+}
+
+#container aside {
+    border: 1px solid black;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+#container aside,
+#ocean {
+    box-shadow: 3px 2px black;
+}
+
+#container aside h2 {
+    text-decoration: underline;
+    font-size: 35px;
+}
+
+#container aside h2,
+#container aside>p {
+    margin-top: 20px;
+}
+
+#container aside p span {
+    margin-left: 15px;
+    text-shadow: 0 0 10px rgb(242, 255, 0),
+        0 0 15px rgb(242, 255, 0),
+        0 0 20px rgb(242, 255, 0);
+}
+
+#container aside #display {
+    box-shadow: 1px 1px black;
+    background-color: white;
+    font-size: 30px;
+    letter-spacing: 0.286em;
+    border-radius: 25%;
+    border: 2px solid black;
+}
+
+#container aside button {
+    margin-top: 30px;
+    height: 3.5em;
+    border: 4px solid black;
+    box-shadow: 5px 5px black;
+    background-color: #2b78e4;
+}
+
+#container aside button:active {
+    /* X, Y, blur, color*/
+    box-shadow: 2px 2px 2px black;
+    transform: translateZ(5px);
+}
+
+#container aside button:hover {
+    /* X,Y, color */
+    text-shadow: 0 0 10px rgb(255, 255, 0),
+        0 0 15px rgb(255, 255, 0),
+        0 0 20px rgb(255, 255, 0);
+    color: white;
+}
+
+#container aside button:focus {
+    border: 4px solid brown;
+}
+
+
+@font-face {
+    font-family: 'CgfLocustResistance';
+    src: url('../fonts/CGFLocustResistance.woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: 200px;
+}
+
+.explosion {
+    position: absolute;
+    background-image: url('../gif/spritesheethorizontal.png');
+    width: 70px;
+    height: 75px;
+    animation: explosion_sprite 0.3s steps(17);
+}
+
+@keyframes explosion_sprite {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -1241px 0;
+    }
+}
